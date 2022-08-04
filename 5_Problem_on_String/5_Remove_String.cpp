@@ -3,6 +3,12 @@
 
 using namespace std;
 
+string modify (string s)
+{
+    s.erase(remove(s.begin(), s.end(), ' '), s.end()); //GeeksforGeeks logic
+    return s;
+}
+
 string solve(string s, int n)
 {
     remove(s.begin(), s.end(),' ');
