@@ -71,3 +71,4 @@ int main()
     }
     return 0;
 }
+//T.C -> O(N)
