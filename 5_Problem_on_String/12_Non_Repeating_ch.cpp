@@ -37,4 +37,4 @@ int main()
     return 0;
 }
 
-//T.C -> (N) S.C -> O(N)
+//T.C -> O(N) S.C -> O(N)
