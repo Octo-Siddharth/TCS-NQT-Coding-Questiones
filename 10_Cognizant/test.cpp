@@ -2,26 +2,33 @@
 
 using namespace std;
 
-int solve(string s)
+bool isPalindrome(int n)
 {
-    int count;
-    for (int i = 0; i < s.length(); i++)
+    int rem = 0, rev, temp;
+    temp = n;
+    while (temp != 0)
     {
-        s[i] = tolower(s[i]);
+        rem = temp % 10;
+        rev = rev * 10 + rem;
+        temp = temp / 10;
     }
-    for(int i = 0; i<s.length(); i++)
+    if (rev == n)
     {
-        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u')
-        {
-            count++;
-        }
+        return true;
     }
-    return count;
+    return false;
 }
 
 int main()
 {
-    string s;
-    getline(cin, s);
-    cout << "The number of vowels are : " << solve(s) << endl;
+    int n;
+    cin >> n;
+    if (isPalindrome(n))
+    {
+        cout << n << " is a Palindrome" << endl;
+    }
+    else
+    {
+        cout << n << " is not a Palindrome" << endl;
+    }
 }

@@ -5,7 +5,7 @@ using namespace std;
 
 bool isPalindrome(int &n)
 {
-    int rem = 0, rev, temp;
+    int rem = 0, rev = 0, temp;
     temp = n;
     while(temp != 0)
     {
