@@ -2,33 +2,18 @@
 
 using namespace std;
 
-bool isPalindrome(int n)
-{
-    int rem = 0, rev, temp;
-    temp = n;
-    while (temp != 0)
-    {
-        rem = temp % 10;
-        rev = rev * 10 + rem;
-        temp = temp / 10;
-    }
-    if (rev == n)
-    {
-        return true;
-    }
-    return false;
-}
-
 int main()
 {
-    int n;
-    cin >> n;
-    if (isPalindrome(n))
+    string s;
+    getline(cin, s);
+    int count = 0;
+    for(int i = 0; i<s.length(); i++)
     {
-        cout << n << " is a Palindrome" << endl;
+        s[i] = tolower(s[i]);
+        if(s[i] >= 'a' && s[i] <='z')
+        {
+            count++;
+        }
     }
-    else
-    {
-        cout << n << " is not a Palindrome" << endl;
-    }
+    cout<<count;
 }
